@@ -39,7 +39,7 @@
 
       section {padding: 3em 0; position: relative;}
 
-      #welcome-section {height: 100vh; background: url('img/food.jpg') top left no-repeat; background-size: auto 100%; background-attachment: fixed; display: flex; align-items: center;}
+      #welcome-section {height: 100vh; background: url('img/food.jpg') top left no-repeat; background-size: auto 100%; display: flex; align-items: center;}
       #welcome-section .container {width: 100%;}
       h1 {color: #FFF; text-align: center; font-size: 1.5rem; padding: .5em 0;}
       h1 div:nth-child(1) {font-family: 'PT Sans Narrow', sans-serif; font-size: .7em; padding: .5em 0;}
@@ -67,7 +67,7 @@
       .proj-name {text-transform: uppercase; margin: .5em 0;}
       .proj-year {margin-bottom: .5em;}
 
-      #contact {background: url('img/food.jpg') top left no-repeat; background-size: auto 100%; background-attachment: fixed; color: #FFF;}
+      #contact {background: url('img/food.jpg') top left no-repeat; background-size: auto 100%; color: #FFF;}
       #contact::before {content: ''; display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(18, 22, 24, .8);}
       #contact header {padding: 0; background: none;}
       
@@ -79,6 +79,10 @@
       #footer {background: #121618; color: #FFF; padding: 1em; text-align: center;}
       #footer ul {padding: 0; margin: 0; list-style: none;}
       #footer li {display: inline-block; margin: 0 .5em;}
+
+      @supports not (-webkit-overflow-scrolling: touch) {
+        #welcome-section, #contact {background-attachment: fixed;}
+      }
 
       @media (min-width: 768px) {
         #navbar {display: flex; justify-content: space-between; padding: 1em 2em;}
